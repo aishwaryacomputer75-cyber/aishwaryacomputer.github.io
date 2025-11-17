@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form | Aishwarya Computer & IT</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    /* ✅ Header (same as index page) */
+    .top-bar {
+      background-color: #0b57a4;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      width: 100%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo img {
+      width: 50px;
+      height: 50px;
+      border-radius: 10px;
+      border: 2px solid #ffd700;
+      background: white;
+    }
+
+    .logo h1 {
+      margin: 0;
+      padding-left: 10px;
+      color: #ffd700;
+      font-size: 26px;
+      font-weight: 700;
+    }
+
+    .subheading {
+      margin-top: 5px;
+      font-size: 14px;
+      color: #cfe2ff;
+    }
+
+    /* ✅ Home Button */
+    .home-btn {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #1565c0;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .home-btn:hover {
+      background-color: #1e88e5;
+    }
+
+    /* ✅ Form */
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+      margin-top: 40px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+
+    button {
+      background-color: #0b57a4;
+      color: white;
+      border: none;
+      padding: 12px;
+      width: 100%;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    /* ✅ Success animation popup */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease-in-out;
+      z-index: 999;
+    }
+
+    .popup.active {
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup h2 {
+      color: #0d47a1;
+      margin-bottom: 10px;
+    }
+
+    .popup p {
+      color: #333;
+    }
+
+    .popup button {
+      background: #0d47a1;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ✅ Header same as index page -->
+  <div class="top-bar">
+    <a href="index.html" class="home-btn">🏠 Home</a>
+    <div class="logo">
+      <img src="images/institute logo.jpg" alt="Aishwarya Logo" />
+      <h1>AISHWARYA COMPUTER & INFORMATION TECHNOLOGY, AMBAJOGAI</h1>
+    </div>
+    <p class="subheading">Ambajogai’s Leading Institute for Computer Education & Digital Skills</p>
+  </div>
+
+  <form id="admissionForm" action="https://formspree.io/f/xkgpdzzp" method="POST">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="course">Select Course:</label>
+    <select name="Course" required>
+  <option value="">Select Course</option>
+  <option value="MS-CIT">MS-CIT (Maharashtra State Certificate in Information Technology)</option>
+  
+  <optgroup label="KLiC Certificate Courses">
+    <option value="KLiC Certificate in Advanced Excel">KLiC Certificate in Advanced Excel</option>
+    <option value="KLiC Certificate in Accounting with TallyPrime">KLiC Certificate in Accounting with TallyPrime</option>
+    <option value="KLiC Certificate in Web Designing">KLiC Certificate in Web Designing</option>
+    <option value="KLiC Certificate in Digital Marketing">KLiC Certificate in Digital Marketing</option>
+    <option value="KLiC Certificate in C Programming">KLiC Certificate in C Programming</option>
+    <option value="KLiC Certificate in C++ Programming">KLiC Certificate in C++ Programming</option>
+    <option value="KLiC Certificate in Java Programming">KLiC Certificate in Java Programming</option>
+    <option value="KLiC Certificate in Python Programming">KLiC Certificate in Python Programming</option>
+    <option value="KLiC Certificate in Mobile App Development & Java Programming">KLiC Certificate in Mobile App Development & Java Programming</option>
+    <option value="KLiC Certificate in Mobile App Development & CSS with HTML">KLiC Certificate in Mobile App Development & CSS with HTML</option>
+    <option value="KLiC Certificate in Java with Server API Development">KLiC Certificate in Java with Server API Development</option>
+    <option value="KLiC Certificate in Data Analytics and Data Visualisation with Python">KLiC Certificate in Data Analytics and Data Visualisation with Python</option>
+    <option value="KLiC Certificate in Data Analytics and Data Visualisation with DBMS">KLiC Certificate in Data Analytics and Data Visualisation with DBMS</option>
+    <option value="KLiC Certificate in Computer Hardware and Networking">KLiC Certificate in Computer Hardware and Networking</option>
+    <option value="KLiC Certificate in Graphic Design">KLiC Certificate in Graphic Design</option>
+    <option value="KLiC Certificate in UI/UX Design">KLiC Certificate in UI/UX Design</option>
+    <option value="KLiC Certificate in Cyber Security">KLiC Certificate in Cyber Security</option>
+    <option value="KLiC Certificate in Cloud Computing">KLiC Certificate in Cloud Computing</option>
+    <option value="KLiC Certificate in Artificial Intelligence Fundamentals">KLiC Certificate in Artificial Intelligence Fundamentals</option>
+    <option value="KLiC Certificate in Machine Learning using Python">KLiC Certificate in Machine Learning using Python</option>
+    <option value="KLiC Certificate in Internet of Things (IoT)">KLiC Certificate in Internet of Things (IoT)</option>
+    <option value="KLiC Certificate in Database Management System">KLiC Certificate in Database Management System</option>
+    <option value="KLiC Certificate in Office Automation">KLiC Certificate in Office Automation</option>
+    <option value="KLiC Certificate in Project Management">KLiC Certificate in Project Management</option>
+    <option value="KLiC Certificate in Business Communication Skills">KLiC Certificate in Business Communication Skills</option>
+    <option value="KLiC Certificate in Soft Skills">KLiC Certificate in Soft Skills</option>
+    <option value="KLiC Certificate in Digital Banking & Finance">KLiC Certificate in Digital Banking & Finance</option>
+    <option value="KLiC Certificate in Data Entry & MIS">KLiC Certificate in Data Entry & MIS</option>
+    <option value="KLiC Certificate in eCommerce Fundamentals">KLiC Certificate in eCommerce Fundamentals</option>
+    <option value="KLiC Certificate in Photoshop">KLiC Certificate in Photoshop</option>
+    <option value="KLiC Certificate in CorelDRAW">KLiC Certificate in CorelDRAW</option>
+    <option value="KLiC Certificate in Video Editing (Filmora & Premiere Pro)">KLiC Certificate in Video Editing (Filmora & Premiere Pro)</option>
+    <option value="KLiC Certificate in AutoCAD">KLiC Certificate in AutoCAD</option>
+    <option value="KLiC Certificate in Digital Typing">KLiC Certificate in Digital Typing</option>
+    <option value="KLiC Certificate in MS Office">KLiC Certificate in MS Office</option>
+    <option value="KLiC Certificate in Computerized Accounting">KLiC Certificate in Computerized Accounting</option>
+    <option value="KLiC Certificate in GST & Taxation">KLiC Certificate in GST & Taxation</option>
+    <option value="KLiC Certificate in Entrepreneurship Skills">KLiC Certificate in Entrepreneurship Skills</option>
+    <option value="KLiC Certificate in Web Application Development">KLiC Certificate in Web Application Development</option>
+    <option value="KLiC Certificate in Cloud Storage & File Management">KLiC Certificate in Cloud Storage & File Management</option>
+    <option value="KLiC Certificate in CRM & ERP Basics">KLiC Certificate in CRM & ERP Basics</option>
+    <option value="KLiC Certificate in AI Tools for Productivity">KLiC Certificate in AI Tools for Productivity</option>
+    <option value="KLiC Certificate in ChatGPT & Generative AI">KLiC Certificate in ChatGPT & Generative AI</option>
+    <option value="KLiC Certificate in Office Management">KLiC Certificate in Office Management</option>
+    <option value="KLiC Certificate in Digital Photography">KLiC Certificate in Digital Photography</option>
+    <option value="KLiC Certificate in Freelancing & Remote Work">KLiC Certificate in Freelancing & Remote Work</option>
+    <option value="KLiC Certificate in Video Production">KLiC Certificate in Video Production</option>
+    <option value="KLiC Certificate in Digital Art">KLiC Certificate in Digital Art</option>
+  </optgroup>
+</select>
+
+
+    <label for="message">Message (Optional):</label>
+    <textarea id="message" name="message" rows="3"></textarea>
+
+    <button type="submit">Submit Form</button>
+  </form>
+
+  <!-- ✅ Success Popup -->
+<div id="popupMessage" class="popup">Form submitted successfully!</div>
+
+<style>
+  /* ✅ Popup Design */
+  .popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4BB543; /* Green color */
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+    z-index: 9999;
+  }
+
+  .popup.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .popup.error {
+    background-color: #D9534F; /* Red for error */
+  }
+</style>
+
+<script>
+  const form = document.getElementById("admissionForm");
+  const popup = document.getElementById("popupMessage");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      form.reset();
+      popup.textContent = "✅ Form submitted successfully!";
+      popup.classList.remove("error");
+      popup.classList.add("show");
+      setTimeout(() => popup.classList.remove("show"), 3000);
+    } else {
+      popup.textContent = "❌ Something went wrong. Please try again.";
+      popup.classList.add("error", "show");
+      setTimeout(() => popup.classList.remove("show"), 3000);
+    }
+  });
+</script>
+
+</body>
+</html>

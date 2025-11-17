@@ -1,0 +1,24 @@
+// Example popup for admission button
+document.addEventListener("DOMContentLoaded", function(){
+
+    // Admission Form Submit
+    const form = document.getElementById("admissionForm");
+    if(form){
+        form.addEventListener("submit", function(e){
+            e.preventDefault();
+            alert("Form submitted successfully!");
+            form.reset();
+        });
+    }
+
+    // Hero Apply Now Button
+    const btn = document.querySelector(".btn");
+    if(btn){
+        btn.addEventListener("click", function(e){
+            e.preventDefault();
+            alert("Redirecting to admission page...");
+            window.location.href = "admission.html";
+        });
+    }
+
+});

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AISHWARYA COMPUTER & INFORMATION TECHNOLOGY, AMBAJOGAI</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Header */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #e9f0fa;
+    }
+
+    .top-bar {
+      background-color: #0b57a4;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .logo img {
+      width: 50px;
+      vertical-align: middle;
+    }
+
+    .logo h1 {
+      display: inline-block;
+      margin: 0;
+      padding-left: 10px;
+      color: #ffd700;
+      font-size: 26px;
+      vertical-align: middle;
+    }
+
+    .subheading {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #cfe2ff;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+      background-color: #155ab6;
+      text-align: center;
+    }
+
+    .nav-bar ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+    }
+
+    .nav-bar li {
+      margin: 0 15px;
+    }
+
+    .nav-bar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      display: inline-block;
+    }
+
+    .nav-bar a.active, .nav-bar a:hover {
+      background-color: #ffd700;
+      color: black;
+      border-radius: 5px;
+    }
+
+    /* Image Slider */
+    .image-slider {
+      position: relative;
+      max-width: 100%;
+      height: 400px;
+      overflow: hidden;
+      background: #d6e4f0;
+      margin: 0 auto;
+    }
+
+    .slides img {
+  width: 100%;
+  max-height: 500px;
+  height: auto;
+  object-fit: contain;   /* contain मुळे image पूर्ण दिसेल */
+  display: none;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .slides img {
+    max-height: 300px;
+  }
+}
+
+
+    .slides img.active {
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Dots below slider */
+    .dots {
+      text-align: center;
+      position: relative;
+      top: -30px;
+    }
+
+    .dot {
+      height: 12px;
+      width: 12px;
+      margin: 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .dot.active {
+      background-color: #0b57a4;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .btn-explore {
+      background-color: #0b57a4;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn-explore:hover {
+      background-color: #ffd700;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- Header -->
+  <header>
+    <div class="top-bar">
+      <div class="logo">
+        <img src="C:\Users\Shree\OneDrive\Desktop\AishwaryaComputerSite\images\institute logo.jpg" alt="Aishwarya Logo" />
+        <h1>AISHWARYA COMPUTER & INFORMATION TECHNOLOGY, AMBAJOGAI</h1>
+      </div>
+      <p class="subheading">Ambajogai’s Leading Institute for Computer Education & Digital Skills</p>
+    </div>
+
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="admission.html">Admission</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Image Slider -->
+  <div class="image-slider">
+    <div class="slides">
+      <img src="images/2024-01-08.webp" alt="Course 1" class="slider-img active" />
+      <img src="images/banr.jpg" alt="Course 2" class="slider-img" />
+      <img src="images/2024-03-17.webp" alt="Course 4" class="slider-img" />
+    </div>
+    <div class="dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <a href="courses.html" class="btn-explore">Explore Our Courses</a>
+  </section>
+
+  <!-- JavaScript for Auto Slide -->
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll(".slider-img");
+    const dots = document.querySelectorAll(".dot");
+
+    function showSlides() {
+      slides.forEach((slide, i) => {
+        slide.classList.remove("active");
+        dots[i].classList.remove("active");
+      });
+
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+
+      slides[slideIndex - 1].classList.add("active");
+      dots[slideIndex - 1].classList.add("active");
+      setTimeout(showSlides, 1000); // 1 second auto-slide
+    }
+
+    showSlides();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,266 @@
+/* Reset and base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e3e9f4;
+  color: #222;
+}
+
+/* Header top bar with logo and heading */
+header {
+  width: 100%;
+}
+
+/* Top blue bar */
+.top-bar {
+  background-color: #034e9e; /* dark blue */
+  color: white;
+  text-align: center;
+  padding: 25px 15px 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.2);
+}
+
+.top-bar .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.top-bar .logo img {
+  width: 70px;
+  height: 70px;
+  background: white;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid #f0c419;
+}
+
+.top-bar h1 {
+  font-size: 36px;
+  font-weight: 900;
+  color: #f0c419; /* golden yellow */
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+  margin-left: 5px;
+}
+
+/* Subheading text */
+.subheading {
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #1b6bbf; /* lighter blue */
+  padding: 8px 12px;
+  border-radius: 4px;
+  display: inline-block;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+/* Navigation bar below the heading */
+.nav-bar {
+  background-color: #1b6bbf;
+  text-align: center;
+  padding: 10px 0 15px;
+  box-shadow: inset 0 -3px 5px rgb(0 0 0 / 0.15);
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.nav-bar ul li a {
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-bar ul li a:hover,
+.nav-bar ul li a.active {
+  background-color: #f0c419;
+  color: #034e9e;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://images.unsplash.com/photo-1581093588401-22f782f2d8c5?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+  height: 450px;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button on hero */
+.btn-explore {
+  background-color: #f0c419;
+  color: #034e9e;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 14px 32px;
+  border-radius: 50px;
+  text-decoration: none;
+  box-shadow: 0 5px 12px rgb(240 196 25 / 0.6);
+  transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+  background-color: white;
+  color: #034e9e;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgb(240 196 25 / 0.8);
+}
+.image-slider {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  position: relative;
+  height: 200px; /* images चा height */
+  overflow: hidden;
+}
+
+.slider-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+}
+
+.slider-img.active {
+  opacity: 1;
+  position: relative;
+}
+.image-slider {
+  position: relative;
+  width: 100%;
+  max-height: 400px; /* adjustable according to your design */
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+.image-slider {
+  position: relative;
+  width: 100%;          /* Full width */
+  max-height: 500px;    /* Adjustable height */
+  overflow: hidden;
+}
+.slide {
+  width: 100%;          /* Full width of container */
+  height: 100%;         
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  object-fit: cover;    /* Cover entire container without distortion */
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 8px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: rgba(255, 255, 255, 1);
+}
+.top-bar2 {
+  background-color: #034e9e; /* dark blue */
+  color: white;
+  text-align: center;
+  padding: 25px 15px 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.2);
+}
+
+.top-bar2 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
+  
+ .top-bar3 {
+  background-color: #034e9e; /* dark blue */
+  color: white;
+  text-align: center;
+  padding: 25px 15px 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 0.2);
+
+.top-bar3 .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 8px;
